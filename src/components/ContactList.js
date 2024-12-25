@@ -3,30 +3,30 @@ import './contactList.css';
 import ContactCard from './ContactCard';
 import { Link } from 'react-router-dom';
 
-function ContactList(props) {
+function ContactList({ xyz = [], getcontactid }) {
     const [searchTerm, setSearchTerm] = useState("");
 
     const deleteContactHandler = (id) => {
-        props.getcontactid(id);
+        getcontactid(id);
     };
 
-    const filteredContacts = props.xyz.filter(contact =>
+    // Fallback to an empty array if xyz is undefined or null
+    const contacts = xyz || [];
+
+    const filteredContacts = contacts.filter(contact =>
         contact.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         contact.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        contact.mobile.includes(searchTerm)
+        (contact.mobile && contact.mobile.includes(searchTerm))
     );
 
-    const renderContactList = filteredContacts.map((contact) => {
-        return (
-            <ContactCard key={contact.id} contact={contact} clickHandler={deleteContactHandler} />
-        );
-    });
+    const renderContactList = filteredContacts.map((contact) => (
+        <ContactCard key={contact.id} contact={contact} clickHandler={deleteContactHandler} />
+    ));
 
     return (
-        <div className='maincontlist'>
+        <div className="maincontlist">
             <header className="contact-list-header">
                 <h2>Contact List</h2>
-
             </header>
             <div className="search-container">
                 <input
@@ -37,7 +37,7 @@ function ContactList(props) {
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
                 <Link to="/add" className="link-button">
-                    <button className='btn btn-success'>Add Contact</button>
+                    <button className="btn btn-success">Add Contact</button>
                 </Link>
             </div>
             <div className="contact-list">
