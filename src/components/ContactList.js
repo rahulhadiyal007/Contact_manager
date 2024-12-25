@@ -3,15 +3,12 @@ import './contactList.css';
 import ContactCard from './ContactCard';
 import { Link } from 'react-router-dom';
 
-function ContactList({ xyz = [], getcontactid }) {
+function ContactList({ contacts = [], onDeleteContact }) { // Use 'contacts' instead of 'xyz'
     const [searchTerm, setSearchTerm] = useState("");
 
     const deleteContactHandler = (id) => {
-        getcontactid(id);
+        onDeleteContact(id); // Use the correct prop name
     };
-
-    // Fallback to an empty array if xyz is undefined or null
-    const contacts = xyz || [];
 
     const filteredContacts = contacts.filter(contact =>
         contact.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
