@@ -17,7 +17,7 @@ function App() {
 
   async function fetchContacts() {
     try {
-      const response = await axios.get(`${API_URL}/contacts?_page=1&_limit=30`);
+      const response = await axios.get(`${API_URL}/contacts`);
       setContacts(response.data);
     } catch (error) {
       console.error('Error fetching contacts:', error);
