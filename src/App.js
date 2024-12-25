@@ -9,7 +9,7 @@ import ContactDetail from './components/ContactDetail';
 import axios from 'axios';
 import EditContact from './components/EditContact';
 
-const API_URL = 'https://my-json-server.typicode.com/rahulhadiyal007/Contact_manager/db';
+const API_URL = 'https://my-json-server.typicode.com/rahulhadiyal007/Contact_manager';
 
 function App() {
   const [contacts, setContacts] = useState([]);
