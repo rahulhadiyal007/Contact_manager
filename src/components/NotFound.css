@@ -1,0 +1,22 @@
+/* NotFound.css */
+
+.not-found-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: #f8f9fa; /* Light background color */
+    color: #343a40; /* Dark text color */
+    font-family: Arial, sans-serif; /* Font style */
+    text-align: center; /* Center text */
+  }
+  
+  .not-found-title {
+    font-size: 48px; /* Large font size */
+    font-weight: bold; /* Bold text */
+  }
+  
+  .not-found-message {
+    font-size: 24px; /* Medium font size */
+    margin-top: 10px; /* Space between title and message */
+  }
