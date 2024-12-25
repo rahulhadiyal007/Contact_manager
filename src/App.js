@@ -16,7 +16,7 @@ function App() {
 
   async function fetchContacts() {
     try {
-      const response = await axios.get(API_URL);
+      const response = await axios.get(`${API_URL}/contacts`);
       setContacts(response.data);
     } catch (error) {
       console.error('Error fetching contacts:', error);
@@ -36,7 +36,7 @@ function App() {
 const addContactHandler = async (newContact) => {
     try {
         const contactWithId = { ...newContact, id: uuidv4(), backgroundColor: getRandomLightColor() }; // Generate a unique ID and random color
-        await axios.post(API_URL, contactWithId);
+        await axios.post(`${API_URL}/contacts`, contactWithId);
         fetchContacts(); // Refresh the contact list
     } catch (error) {
         console.error('Error adding contact:', error);
@@ -44,13 +44,13 @@ const addContactHandler = async (newContact) => {
 };
 
   const removeContactHandler = async (id) => {
-    await axios.delete(`${API_URL}/${id}`);
+    await axios.delete(`${API_URL}/contacts/${id}`);
     fetchContacts();
   };
 
   const updateContactHandler = async (updatedContact) => {
     try {
-      await axios.put(`${API_URL}/${updatedContact.id}`, updatedContact);
+      await axios.put(`${API_URL}/contacts/${updatedContact.id}`, updatedContact);
       fetchContacts();
     } catch (error) {
       console.error('Error updating contact:', error);
