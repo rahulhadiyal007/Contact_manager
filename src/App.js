@@ -10,7 +10,8 @@ import axios from 'axios';
 import EditContact from './components/EditContact';
 import NotFound from './components/NotFound';
 
-const API_URL = 'https://my-json-server.typicode.com/rahulhadiyal007/Contact_manager';
+// Use the live Render URL
+const API_URL = 'https://contact-manager-json-server.onrender.com/contacts';
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -18,7 +19,7 @@ function App() {
   // Fetch contacts from the API
   const fetchContacts = async () => {
     try {
-      const response = await axios.get(`${API_URL}/contacts`);
+      const response = await axios.get(API_URL); // Updated API URL
       setContacts(response.data || []);
     } catch (error) {
       console.error('Error fetching contacts:', error);
@@ -41,7 +42,7 @@ function App() {
         id: uuidv4(),
         backgroundColor: getRandomLightColor(),
       };
-      await axios.post(`${API_URL}/contacts`, contactWithId);
+      await axios.post(API_URL, contactWithId); // Updated API URL
       fetchContacts();
     } catch (error) {
       console.error('Error adding contact:', error);
@@ -51,7 +52,7 @@ function App() {
   // Remove a contact
   const removeContactHandler = async (id) => {
     try {
-      await axios.delete(`${API_URL}/contacts/${id}`);
+      await axios.delete(`${API_URL}/${id}`); // Updated API URL
       fetchContacts();
     } catch (error) {
       console.error('Error deleting contact:', error);
@@ -61,7 +62,7 @@ function App() {
   // Update a contact
   const updateContactHandler = async (updatedContact) => {
     try {
-      await axios.put(`${API_URL}/contacts/${updatedContact.id}`, updatedContact);
+      await axios.put(`${API_URL}/${updatedContact.id}`, updatedContact); // Updated API URL
       fetchContacts();
     } catch (error) {
       console.error('Error updating contact:', error);
