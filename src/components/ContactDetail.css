@@ -1,0 +1,126 @@
+/* Main container for the Contact Detail component */
+.contact-detail {
+    max-width: 650px; /* Slightly wider for a more spacious layout */
+    margin: 40px auto; /* Center the component on the page */
+    padding: 25px;
+    background: linear-gradient(to right, #ffffff, #f9f9f9); /* Subtle gradient background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    text-align: center; /* Center text */
+    border: 1px solid #ddd; /* Subtle border */
+}
+
+/* Heading style */
+h2 {
+    color: #2c3e50; /* Darker, elegant color for the heading */
+    margin-bottom: 25px; /* Space below the heading */
+    font-family: 'Arial', sans-serif; /* Change font for a modern look */
+    text-transform: uppercase; /* Make text uppercase for emphasis */
+    letter-spacing: 1px; /* Add spacing between letters */
+}
+
+/* Image styling */
+.imgdetail {
+    width: 160px; /* Slightly larger image */
+    height: 160px; /* Maintain square ratio */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Cover the area without distortion */
+    margin-bottom: 25px; /* Space below the image */
+    border: 4px solid #007bff; /* Blue border around the image */
+}
+
+/* Info section styling */
+.info {
+    margin-bottom: 25px; /* Space below the info section */
+    font-size: 18px; /* Font size for info text */
+    color: #444; /* Medium-dark gray for text */
+    line-height: 1.6; /* Increase line height for readability */
+}
+
+/* Button container */
+.button-group {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center buttons horizontally */
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px; /* Space above the buttons */
+}
+
+/* Button styling */
+.btn {
+    padding: 12px 25px; /* Increased padding */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Font size for buttons */
+    font-family: 'Arial', sans-serif; /* Consistent font */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Warning button styling */
+.btn-warning {
+    background-color: #ffc107; /* Bootstrap warning color */
+    color: white; /* White text */
+}
+
+/* Warning button hover state */
+.btn-warning:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Edit button styling */
+.btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text */
+}
+
+/* Edit button hover state */
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Share button styling */
+.btn-info {
+    background-color: #17a2b8; /* Bootstrap info color */
+    color: white; /* White text */
+}
+
+/* Share button hover state */
+.btn-info:hover {
+    background-color: #138496; /* Darker teal on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Print button styling */
+.btn-success {
+    background-color: #28a745; /* Bootstrap success color */
+    color: white; /* White text */
+}
+
+/* Print button hover state */
+.btn-success:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .contact-detail {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .info {
+        font-size: 16px; /* Smaller font size for info text */
+    }
+
+    .btn {
+        font-size: 14px; /* Smaller font size for buttons */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .button-group {
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        gap: 10px; /* Add spacing between buttons */
+    }
+}

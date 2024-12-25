@@ -1,0 +1,317 @@
+{
+  "contacts": [
+    {
+      "id": "27a3f0c3-f387-45ed-9e8c-5c0bb2ada931",
+      "name": "Nayanthara",
+      "mobile": "7777777777",
+      "email": "Nayanathara@gmail.com"
+    },
+    {
+      "id": "7643670b-e4fa-4cff-895f-d9a08463a76d",
+      "name": "Trisha Krishnan",
+      "mobile": "8278737737",
+      "email": "trisha@gmail.com",
+      "backgroundColor": "rgb(150, 246, 220)"
+    },
+    {
+      "id": "bca9abd8-beb1-4c59-8d06-c677ae63d4e5",
+      "name": "Shruti Hasan",
+      "mobile": "3673566633",
+      "email": "hasan.shruti@gmail.com",
+      "backgroundColor": "rgb(127, 176, 204)"
+    },
+    {
+      "id": "e60a5645-ad37-4712-af29-814e68da216c",
+      "name": "Kajal Agraval",
+      "mobile": "5464454555",
+      "email": "kajal@gmail.com",
+      "backgroundColor": "rgb(218, 216, 179)"
+    },
+    {
+      "id": "5f1c2564-8b82-49bc-9c67-ef343b4c9db6",
+      "name": "Radhika",
+      "mobile": "2135646465",
+      "email": "radhika@gmail.com",
+      "backgroundColor": "rgb(180, 174, 168)"
+    },
+    {
+      "id": "0518ec82-01eb-4583-903b-2332f5771ed3",
+      "name": "Anushka Shetty",
+      "mobile": "9990090000",
+      "email": "anushka@gmail.com",
+      "backgroundColor": "rgb(249, 142, 220)"
+    },
+    {
+      "id": "30c615cf-1518-4728-8a3f-1d65f9fba920",
+      "name": "Keerthy Suresh",
+      "mobile": "5656576777",
+      "email": "keerthy@gmail.com",
+      "backgroundColor": "rgb(129, 185, 169)"
+    },
+    {
+      "id": "cbedcb0b-7544-4958-b369-0d97a686e89d",
+      "name": "Rashmika Mandana",
+      "mobile": "6378678364",
+      "email": "rashmika@gmail.com",
+      "backgroundColor": "rgb(183, 189, 203)"
+    },
+    {
+      "id": "0efa594b-ecd3-45de-a951-ff279db6da62",
+      "name": "Kareena Kapoor",
+      "mobile": "7866677777",
+      "email": "kareena@gmail.com",
+      "backgroundColor": "rgb(130, 159, 224)"
+    },
+    {
+      "id": "038cd99f-b3b0-4424-bca0-2096f48c4b36",
+      "name": "Alia Bhatt",
+      "mobile": "5565676672",
+      "email": "alia.bhat@gmail.com",
+      "backgroundColor": "rgb(163, 145, 239)"
+    },
+    {
+      "id": "6cb00e2b-35fd-4e8a-a534-7d1c8ea989c5",
+      "name": "Madhuri Dixit",
+      "mobile": "6367834687",
+      "email": "madhri@gmail.com",
+      "backgroundColor": "rgb(251, 138, 200)"
+    },
+    {
+      "id": "731a5fb8-86b4-465f-9d33-c9e959fd2888",
+      "name": "Alka Yagnik",
+      "mobile": "5675656767",
+      "email": "alka@gmail.com",
+      "backgroundColor": "rgb(172, 129, 250)"
+    },
+    {
+      "id": "a1020389-d448-4bdb-b00a-1e7594b1be78",
+      "name": "Shilpa Shetty",
+      "mobile": "4486464655",
+      "email": "shipa@gmail.com",
+      "backgroundColor": "rgb(181, 156, 135)"
+    },
+    {
+      "id": "0b82a3cc-00c4-4a0e-858e-e81dafd5fad3",
+      "name": "Sara Ali khan",
+      "mobile": "6267777747",
+      "email": "sara@gmail.com",
+      "backgroundColor": "rgb(162, 153, 224)"
+    },
+    {
+      "id": "44598d52-25ec-4212-b2d6-868a5256f110",
+      "name": "Emma Johnson",
+      "mobile": "1234567890",
+      "email": "emma.johnson@example.com",
+      "backgroundColor": "rgb(229, 150, 224)"
+    },
+    {
+      "id": "981ecdac-3f00-4a95-bd8e-5b3ffb626ad3",
+      "name": "Olivia Smith ",
+      "mobile": "9012827363",
+      "email": "olivia.smith@example.com",
+      "backgroundColor": "rgb(229, 207, 229)"
+    },
+    {
+      "id": "d6ab729a-8ac6-4b7d-b6a8-410c0de748aa",
+      "name": " Ava Brown   ",
+      "mobile": "8273647338",
+      "email": "ava.brown@example.com",
+      "backgroundColor": "rgb(211, 252, 217)"
+    },
+    {
+      "id": "84251036-70ad-4f84-b7ac-c7bf162cf75a",
+      "name": "Dimple kapadiya",
+      "mobile": "6767398888",
+      "email": "dimple.kapadiya@yahoo.in",
+      "backgroundColor": "rgb(195, 138, 193)"
+    },
+    {
+      "id": "1c24fc92-da3a-4965-bf97-61912ca70478",
+      "name": "Khushi",
+      "mobile": "3575747474",
+      "email": "khushi@gmail.com",
+      "backgroundColor": "rgb(206, 220, 246)"
+    },
+    {
+      "id": "0baa2de3-56cb-42fb-933f-50301040b1a5",
+      "name": "Kavya creator",
+      "mobile": "6273878844",
+      "email": "kavya@gmail.com",
+      "backgroundColor": "rgb(225, 178, 226)"
+    },
+    {
+      "id": "ab9e4bba-9b34-43f0-9661-93777dce9c97",
+      "name": "Reshma Pandit",
+      "mobile": "7493988844",
+      "email": "reshma.pandit@gmail.com",
+      "backgroundColor": "rgb(226, 220, 130)"
+    },
+    {
+      "id": "7a676636-37fe-428e-96b6-0a427c1752fb",
+      "name": "Dipali Verma",
+      "mobile": "6463639888",
+      "email": "dipali@gmail.com",
+      "backgroundColor": "rgb(133, 223, 187)"
+    },
+    {
+      "id": "dfa01c7e-decc-48e7-9b67-0a9858aa7902",
+      "name": "Meena kanzariya",
+      "mobile": "1445666666",
+      "email": "meena.kanzariya@gmail.com",
+      "backgroundColor": "rgb(204, 243, 253)"
+    },
+    {
+      "id": "cdad5c55-7c1d-408e-8839-dd8e8c759b09",
+      "name": "Asmita Kanzariya",
+      "mobile": "7297989888",
+      "email": "asmita.kanzariya@gmail.com",
+      "backgroundColor": "rgb(233, 138, 227)"
+    },
+    {
+      "id": "91bd5611-9e31-4063-a799-01ff363b512d",
+      "name": "vaishali chavada",
+      "mobile": "3683878889",
+      "email": "vaishu@chavada.com",
+      "backgroundColor": "rgb(230, 239, 134)"
+    },
+    {
+      "id": "9f8fd7a6-1f68-46f0-9b9d-db682dedb66b",
+      "name": "Pooja Sonagar",
+      "mobile": "6868888888",
+      "email": "pooja@gmail.com",
+      "backgroundColor": "rgb(166, 165, 186)"
+    },
+    {
+      "id": "829891af-b3d5-44a2-8725-8e15f963c9d4",
+      "name": "Khushali sonagara",
+      "mobile": "3573737787",
+      "email": "khushali.sonagara@gmail.com",
+      "backgroundColor": "rgb(240, 132, 151)"
+    },
+    {
+      "id": "d4150ea4-374d-44df-93cc-448f8e140132",
+      "name": "Shruti Jadav",
+      "mobile": "2993843747",
+      "email": "shruti@gmail.com",
+      "backgroundColor": "rgb(213, 162, 208)"
+    },
+    {
+      "id": "44569076-dc9d-4d18-972e-a04dc32490a8",
+      "name": "anju patel",
+      "mobile": "8484746463",
+      "email": "anjali.patel@gmail.com",
+      "backgroundColor": "rgb(181, 139, 174)"
+    },
+    {
+      "id": "70f10d54-a004-4c5d-bcf7-a53b707c86a5",
+      "name": "Poonam Pandey",
+      "mobile": "2326698898",
+      "email": "poonam@gmail.com",
+      "backgroundColor": "rgb(240, 175, 248)"
+    },
+    {
+      "id": "0367cca2-fc42-4273-9d60-e5d9466f9c91",
+      "name": "kavya sharma",
+      "mobile": "3989889933",
+      "email": "kavya@gmail.com",
+      "backgroundColor": "rgb(171, 178, 254)"
+    },
+    {
+      "id": "ad74170e-5062-4313-a420-85f258094333",
+      "name": "Radhika Aapte",
+      "mobile": "7623897744",
+      "email": "apteradhika@gmail.com",
+      "backgroundColor": "rgb(151, 227, 177)"
+    },
+    {
+      "id": "42f00679-6dd0-4994-882b-979e4e121c6c",
+      "name": "Bharati actor",
+      "mobile": "8468488888",
+      "email": "bharati@gmail.com",
+      "backgroundColor": "rgb(146, 236, 223)"
+    },
+    {
+      "id": "53583072-8845-41ea-a092-703c8f2730f6",
+      "name": "madhavi bhide",
+      "mobile": "3629698989",
+      "email": "madhavi@tmkoc.com"
+    },
+    {
+      "id": "50a8fdb0-7130-430f-9ec9-f668f44f616f",
+      "name": "Anjali Maheta",
+      "mobile": "2678688877",
+      "email": "anjali.maheta@tmkoc.in",
+      "backgroundColor": "rgb(227, 209, 147)"
+    },
+    {
+      "id": "63d1f098-f375-4610-946e-1c94bfc411aa",
+      "name": "Bharagavi Prahapati",
+      "mobile": "2878787878",
+      "email": "bhar.prahajshsh@gmail.com",
+      "backgroundColor": "rgb(129, 151, 212)"
+    },
+    {
+      "id": "a867e631-914f-4caa-bf61-8b87fb02ea67",
+      "name": "Anjali Patel",
+      "mobile": "3268788844",
+      "email": "anju@yahoo.in",
+      "backgroundColor": "rgb(244, 134, 168)"
+    },
+    {
+      "id": "d86678f9-ac36-4433-850d-0dfea38b559e",
+      "name": "sarika",
+      "mobile": "2037878884",
+      "email": "sarika@gmail.com",
+      "backgroundColor": "rgb(210, 150, 189)"
+    },
+    {
+      "id": "39cb0b05-8df3-43e6-953e-8b3df6074e50",
+      "name": "Dr sareeka",
+      "mobile": "4638769834",
+      "email": "dr.sareeka.cid@gmail.com",
+      "backgroundColor": "rgb(139, 179, 191)"
+    },
+    {
+      "id": "15d37269-e979-49ba-98ee-bb29248af619",
+      "name": "Shreya ",
+      "mobile": "4678369998",
+      "email": "shreya@gmail.com",
+      "backgroundColor": "rgb(151, 159, 242)"
+    },
+    {
+      "id": "8eb08bcf-e4d9-4af5-a952-2cee61300125",
+      "name": "Vijay Thalapathy",
+      "mobile": "8788788833",
+      "email": "vijay.thalapathy@gmail.com",
+      "backgroundColor": "rgb(209, 234, 133)"
+    },
+    {
+      "id": "81fa5fff-78ad-4f3e-a03d-a4d426ecca21",
+      "name": "Vijay Devarkonda",
+      "mobile": "3469788883",
+      "email": "vijay.devarkpnda2@gmail.com",
+      "backgroundColor": "rgb(228, 203, 248)"
+    },
+    {
+      "id": "a8f08cfe-1390-468b-b49a-115ba6b03de7",
+      "name": "Sanjay kanzariya",
+      "mobile": "5631487689",
+      "email": "sanjay@gmail.com",
+      "backgroundColor": "rgb(196, 171, 209)"
+    },
+    {
+      "id": "4ff89040-3370-472e-acf0-f440815ecd88",
+      "name": "Rahul the creator",
+      "mobile": "3687387888",
+      "email": "rahul@gmail.com",
+      "backgroundColor": "rgb(152, 208, 133)"
+    },
+    {
+      "id": "d30d187a-7922-47e0-8c32-64e19882eae8",
+      "name": "Suzi Omaha",
+      "mobile": "5656848447",
+      "email": "suzi@gmail.com",
+      "backgroundColor": "rgb(226, 221, 242)"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+/* Main container for the Edit Contact form */
+.edit-contact {
+    max-width: 600px; /* Width of the form */
+    margin: 40px auto; /* Center the form on the page */
+    padding: 30px; /* Padding inside the form */
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Gradient background for subtle style */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+}
+
+/* Heading style */
+h2 {
+    text-align: center; /* Center the heading */
+    color: #343a40; /* Darker gray for a bolder look */
+    font-size: 28px; /* Larger font size */
+    margin-bottom: 25px; /* More space below the heading */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px; /* Increased space between form groups */
+}
+
+/* Label styling */
+label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 8px; /* Space below labels */
+    font-weight: bold; /* Bold labels for emphasis */
+    color: #495057; /* Dark gray for better visibility */
+}
+
+/* Input field styling */
+input {
+    width: 100%; /* Full width */
+    padding: 12px; /* More padding for a premium feel */
+    border: 1px solid #ced4da; /* Slightly darker border */
+    border-radius: 8px; /* Rounded corners for input fields */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+/* Input focus effect */
+input:focus {
+    border-color: #007bff; /* Change border color on focus */
+}
+
+/* Valid state styling */
+input:valid {
+    border-color: #28a745; /* Green border for valid input */
+}
+
+/* Invalid state styling */
+input:invalid {
+    border-color: #dc3545; /* Red border for invalid input */
+}
+
+/* Button group styling */
+.button-group {
+    display: flex; /* Use flexbox for button alignment */
+    justify-content: space-between; /* Space between buttons */
+}
+
+/* Button styling */
+.btn {
+    padding: 10px 20px; /* Padding for buttons */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    color: white; /* White text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Specific button colors */
+.btn-success {
+    background-color: #28a745; /* Green for save button */
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Yellow for cancel button */
+}
+
+/* Button hover effects */
+.btn-success:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.btn-warning:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+}

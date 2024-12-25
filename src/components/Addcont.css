@@ -1,0 +1,117 @@
+/* Main container for the Add Contact form */
+.main-add-contact {
+    max-width: 600px; /* Slightly wider for a modern look */
+    margin: 40px auto; /* Center the form on the page */
+    padding: 30px; /* More padding for spaciousness */
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Gradient background for subtle style */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+}
+
+/* Heading style */
+h2 {
+    text-align: center; /* Center the heading */
+    color: #343a40; /* Darker gray for a bolder look */
+    font-size: 28px; /* Larger font size */
+    margin-bottom: 25px; /* More space below the heading */
+    font-family: 'Arial', sans-serif; /* Clean font for headings */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px; /* Increased space between form groups */
+}
+
+/* Label styling */
+label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 8px; /* Space below labels */
+    font-weight: bold; /* Bold labels for emphasis */
+    color: #495057; /* Dark gray for better visibility */
+    font-family: 'Roboto', sans-serif; /* Modern font for labels */
+}
+
+/* Input field styling */
+.form-control {
+    width: 100%; /* Full width */
+    padding: 12px; /* More padding for a premium feel */
+    border: 1px solid #ced4da; /* Slightly darker border */
+    border-radius: 8px; /* Softer rounded corners */
+    font-size: 16px; /* Font size for input */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border color and shadow */
+    background-color: #ffffff; /* Clean white background */
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+}
+
+/* Input focus state */
+.form-control:focus {
+    border-color: #80bdff; /* Light blue border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 8px rgba(128, 189, 255, 0.5); /* Light blue glow */
+}
+
+/* Invalid input state */
+.form-control:invalid {
+    border-color: #e3342f; /* Bootstrap danger color for invalid input */
+    background-color: #f8d7da; /* Light red background for invalid input */
+}
+
+/* Valid input state */
+.form-control:valid {
+    border-color: #38c172; /* Bootstrap success color for valid input */
+    background-color: #d4edda; /* Light green background for valid input */
+}
+
+/* Button styling */
+.btn {
+    width: 100%; /* Full width buttons */
+    padding: 12px; /* Padding inside buttons */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 18px; /* Larger font size for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+    font-family: 'Arial', sans-serif; /* Clean font */
+}
+
+/* Primary button styling */
+.btn-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient for primary button */
+    color: white; /* White text */
+    font-weight: bold; /* Bold text */
+}
+
+/* Primary button hover state */
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f); /* Darker gradient on hover */
+    transform: scale(1.03); /* Slight enlargement on hover */
+}
+
+/* Secondary button styling */
+.btn-secondary {
+    background: linear-gradient(135deg, #6c757d, #495057); /* Gradient for secondary button */
+    color: white; /* White text */
+    margin-top: 12px; /* Space above the secondary button */
+}
+
+/* Secondary button hover state */
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #495057, #343a40); /* Darker gradient on hover */
+    transform: scale(1.03); /* Slight enlargement on hover */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .main-add-contact {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    h2 {
+        font-size: 24px; /* Smaller heading size */
+    }
+
+    .btn {
+        font-size: 16px; /* Adjust button font size */
+    }
+}
