@@ -9,7 +9,7 @@ import ContactDetail from './components/ContactDetail';
 import axios from 'axios';
 import EditContact from './components/EditContact';
 
-const API_URL = 'http://localhost:3000/contacts';
+const API_URL = 'http://localhost:5000/contacts';
 
 function App() {
   const [contacts, setContacts] = useState([]);
