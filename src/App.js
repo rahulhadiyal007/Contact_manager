@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ContactDetail from './components/ContactDetail';
 import axios from 'axios';
 import EditContact from './components/EditContact';
+import NotFound from './components/NotFound'; // Create this component
 
 const API_URL = 'https://my-json-server.typicode.com/rahulhadiyal007/Contact_manager';
 
@@ -24,24 +25,21 @@ function App() {
   }
 
   const getRandomLightColor = () => {
-    // Generate random values for red, green, and blue
-    const r = Math.floor(Math.random() * 128 + 127); // Range: 127 to 255
-    const g = Math.floor(Math.random() * 128 + 127); // Range: 127 to 255
-    const b = Math.floor(Math.random() * 128 + 127); // Range: 127 to 255
+    const r = Math.floor(Math.random() * 128 + 127);
+    const g = Math.floor(Math.random() * 128 + 127);
+    const b = Math.floor(Math.random() * 128 + 127);
+    return `rgb(${r}, ${g}, ${b})`;
+  };
 
-    return `rgb(${r}, ${g}, ${b})`; // Return the RGB color
-};
-
-// Example of adding a new contact
-const addContactHandler = async (newContact) => {
+  const addContactHandler = async (newContact) => {
     try {
-        const contactWithId = { ...newContact, id: uuidv4(), backgroundColor: getRandomLightColor() }; // Generate a unique ID and random color
-        await axios.post(`${API_URL}/contacts`, contactWithId);
-        fetchContacts(); // Refresh the contact list
+      const contactWithId = { ...newContact, id: uuidv4(), backgroundColor: getRandomLightColor() };
+      await axios.post(`${API_URL}/contacts`, contactWithId);
+      fetchContacts();
     } catch (error) {
-        console.error('Error adding contact:', error);
+      console.error('Error adding contact:', error);
     }
-};
+  };
 
   const removeContactHandler = async (id) => {
     await axios.delete(`${API_URL}/contacts/${id}`);
@@ -70,6 +68,7 @@ const addContactHandler = async (newContact) => {
           <Route path='/' element={<ContactList xyz={contacts} getcontactid={removeContactHandler} />} />
           <Route path='/contact/:id' element={<ContactDetail contacts={contacts} />} />
           <Route path='/edit/:id' element={<EditContact contacts={contacts} updateContact={updateContactHandler} />} />
+          <Route path="*" element={<NotFound />} /> {/* Catch-all route for undefined paths */}
         </Routes>
       </Router>
     </div>
