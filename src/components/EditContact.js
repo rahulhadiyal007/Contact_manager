@@ -12,6 +12,7 @@ function EditContact({ contacts, onUpdateContact }) {
     const [email, setEmail] = useState('');
     
     useEffect(() => {
+        console.log("Contact found:", contact); 
         if (contact) {
             setName(contact.name);
             setMobile(contact.mobile);
@@ -80,7 +81,7 @@ function EditContact({ contacts, onUpdateContact }) {
                     />
                 </div>
                 <div className="button-group">
-                    <button type="submit" className="btn btn-success">Save</button>
+                    <button type="submit" className="btn btn-success"  >Save</button>
                     <button type="button" className="btn btn-warning" onClick={handleCancel}>Cancel</button>
                 </div>
             </form>
