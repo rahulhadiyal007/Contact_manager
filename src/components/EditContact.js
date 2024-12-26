@@ -7,7 +7,7 @@ function EditContact({ contacts, onUpdateContact }) {
     const { id } = useParams();
     
     console.log("Editing contact with ID:", id); // This id comes as a string, so we will parse it
-    const contact = contacts.find(contact => contact.id === parseInt(id)); // Ensure the comparison is done correctly
+    const contact = contacts.find(contact => contact.id === id); // Ensure the comparison is done correctly
 
     
     const [name, setName] = useState('');
