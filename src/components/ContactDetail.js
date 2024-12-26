@@ -9,7 +9,7 @@ import { Button } from 'bootstrap';
 function ContactDetail({ contacts }) {
     const navigate = useNavigate();
     const { id } = useParams();
-    const contact = contacts.find(contact => contact.id === id);
+    const contact = contacts.find(contact => contact.id === parseInt(id));
 
 
     if (!contact) {
