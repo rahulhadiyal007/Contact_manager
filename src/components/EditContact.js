@@ -9,13 +9,13 @@ function EditContact({ contacts, onUpdateContact }) {
     console.log("Editing contact with ID:", id); // This id comes as a string, so we will parse it
     const contact = contacts.find(contact => contact.id === parseInt(id)); // Ensure the comparison is done correctly
 
-    console.log("Contacts array:", contacts);
-
+    
     const [name, setName] = useState('');
     const [mobile, setMobile] = useState('');
     const [email, setEmail] = useState('');
     
     useEffect(() => {
+        console.log("Contacts array:", contacts);
         console.log("Contact found:", contact); 
         if (contact) {
             setName(contact.name);
