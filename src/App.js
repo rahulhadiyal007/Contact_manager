@@ -9,7 +9,7 @@ import ContactDetail from './components/ContactDetail';
 import EditContact from './components/EditContact';
  import NotFound from './components/NotFound';
 
-const API_URL = 'https://contact-manager-json-server.onrender.com/contacts';
+ const API_URL = 'https://contact-manager-json-server.onrender.com/contacts';
 
 function App() {
   const [contacts, setContacts] = useState([]);

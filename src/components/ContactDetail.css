@@ -1,126 +1,137 @@
 /* Main container for the Contact Detail component */
 .contact-detail {
-    max-width: 650px; /* Slightly wider for a more spacious layout */
-    margin: 40px auto; /* Center the component on the page */
-    padding: 25px;
-    background: linear-gradient(to right, #ffffff, #f9f9f9); /* Subtle gradient background */
+    max-width: 600px; /* Limit the width for better readability */
+    margin: 40px auto; /* Center the component */
+    padding: 30px; /* Padding for inner spacing */
+    background: linear-gradient(135deg, #f9f9f9, #ffffff); /* Subtle gradient background */
     border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow */
     text-align: center; /* Center text */
-    border: 1px solid #ddd; /* Subtle border */
+    font-family: 'Poppins', sans-serif; /* Font family */
 }
 
 /* Heading style */
-h2 {
-    color: #2c3e50; /* Darker, elegant color for the heading */
-    margin-bottom: 25px; /* Space below the heading */
-    font-family: 'Arial', sans-serif; /* Change font for a modern look */
-    text-transform: uppercase; /* Make text uppercase for emphasis */
-    letter-spacing: 1px; /* Add spacing between letters */
+.contact-detail > h2 {
+    color: #2c3e50; /* Richer text color */
+    margin-bottom: 10px; /* Space below the heading */
+    font-size: 28px; /* Font size */
+    font-weight: 600; /* Semi-bold font weight */
+    letter-spacing: 0.5px; /* Add slight spacing for elegance */
+    
 }
 
 /* Image styling */
 .imgdetail {
-    width: 160px; /* Slightly larger image */
-    height: 160px; /* Maintain square ratio */
+    width: 120px; /* Profile image size */
+    height: 120px; /* Profile image size */
     border-radius: 50%; /* Circular image */
-    object-fit: cover; /* Cover the area without distortion */
-    margin-bottom: 25px; /* Space below the image */
-    border: 4px solid #007bff; /* Blue border around the image */
+    object-fit: cover; /* Cover the area */
+    margin-bottom: 20px; /* Space below the image */
+    border: 5px solid #007bff; /* Thicker border for prominence */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+.imgdetail:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4); /* Enhanced shadow effect */
 }
 
 /* Info section styling */
 .info {
-    margin-bottom: 25px; /* Space below the info section */
-    font-size: 18px; /* Font size for info text */
-    color: #444; /* Medium-dark gray for text */
-    line-height: 1.6; /* Increase line height for readability */
+    margin-bottom: 10px; /* Space below the info section */
+    font-size: 18px; /* Font size for info */
+    color: #555; /* Text color */
+    line-height: 1.8; /* Increased line height for readability */
+    
+}
+
+.info div {
+    margin-bottom: 10px; /* Space between info items */
+}
+
+.info div strong {
+    color: #007bff; /* Highlighted color for labels */
 }
 
 /* Button container */
 .button-group {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center buttons horizontally */
-    gap: 15px; /* Space between buttons */
-    margin-top: 20px; /* Space above the buttons */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    margin-top: 1px; /* Space above button group */
+    
 }
 
-/* Button styling */
-.btn {
-    padding: 12px 25px; /* Increased padding */
-    border: none; /* Remove default border */
-    border-radius: 8px; /* Rounded corners */
-    font-size: 16px; /* Font size for buttons */
-    font-family: 'Arial', sans-serif; /* Consistent font */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
+
+
+.button-group > .btn {
+    cursor: pointer; /* Pointer cursor for interaction */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    
 }
 
-/* Warning button styling */
+
+/* Button color styles */
 .btn-warning {
-    background-color: #ffc107; /* Bootstrap warning color */
-    color: white; /* White text */
+    background: linear-gradient(135deg, #ffcc00, #ffa500); /* Warm gradient */
+    color: #fff; /* White text */
 }
 
-/* Warning button hover state */
 .btn-warning:hover {
-    background-color: #e0a800; /* Darker yellow on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    background: linear-gradient(135deg, #ffa500, #ff8c00); /* Darker gradient on hover */
+    box-shadow: 0 6px 15px rgba(255, 140, 0, 0.5); /* Glow effect */
+    color: #fff; /* White text */
 }
 
-/* Edit button styling */
 .btn-primary {
-    background-color: #007bff; /* Bootstrap primary color */
-    color: white; /* White text */
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Cool gradient */
+    color: #fff; /* White text */
 }
 
-/* Edit button hover state */
 .btn-primary:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    background: linear-gradient(135deg, #0056b3, #003d80); /* Darker gradient on hover */
+    box-shadow: 0 6px 15px rgba(0, 86, 179, 0.5); /* Glow effect */
+    color: #fff; /* White text */
 }
 
-/* Share button styling */
 .btn-info {
-    background-color: #17a2b8; /* Bootstrap info color */
-    color: white; /* White text */
+    background: linear-gradient(135deg, #17a2b8, #117a8b); /* Ocean gradient */
+    color: #fff; /* White text */
 }
 
-/* Share button hover state */
 .btn-info:hover {
-    background-color: #138496; /* Darker teal on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    background: linear-gradient(135deg, #117a8b, #0e5e6e); /* Darker gradient on hover */
+    box-shadow: 0 6px 15px rgba(17, 122, 139, 0.5); /* Glow effect */
+    color: #fff; /* White text */
 }
 
-/* Print button styling */
 .btn-success {
-    background-color: #28a745; /* Bootstrap success color */
-    color: white; /* White text */
+    background: linear-gradient(135deg, #28a745, #1d7632); /* Green gradient */
+    color: #fff; /* White text */
 }
 
-/* Print button hover state */
 .btn-success:hover {
-    background-color: #218838; /* Darker green on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    background: linear-gradient(135deg, #1d7632, #145626); /* Darker gradient on hover */
+    box-shadow: 0 6px 15px rgba(29, 118, 50, 0.5); /* Glow effect */
+    color: #fff; /* White text */
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
+/* Responsive adjustments */
+@media (max-width: 768px) {
     .contact-detail {
-        padding: 20px; /* Reduce padding on smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
     }
 
     .info {
-        font-size: 16px; /* Smaller font size for info text */
+        font-size: 16px; /* Smaller font size for info */
     }
 
-    .btn {
+    .button-group > button {
         font-size: 14px; /* Smaller font size for buttons */
-        padding: 10px 20px; /* Adjust padding for smaller screens */
+        padding: 10px; /* Adjust padding for buttons */
     }
 
     .button-group {
-        flex-wrap: wrap; /* Allow wrapping for smaller screens */
-        gap: 10px; /* Add spacing between buttons */
+        gap: 10px; /* Adjust button spacing */
     }
 }

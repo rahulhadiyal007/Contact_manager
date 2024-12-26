@@ -15,6 +15,13 @@ function AddContact({ onAddContact }) {
         if (!name || !mobile || !email) {
             return "All fields are mandatory";
         }
+ 
+         const nameregex =  /^[a-zA-Z\s]*$/;
+         if(!nameregex.test(name)){
+            return "Name contain only alphabetic"
+         }
+
+
         // Mobile number should be exactly 10 digits
         const mobileRegex = /^\d{10}$/;
         if (!mobileRegex.test(mobile)) {
@@ -97,8 +104,11 @@ function AddContact({ onAddContact }) {
                     />
                 </div>
                 {error && <div className="error-message">{error}</div>}
+                <div className='addcontactbtn' >
                 <button type='submit' className='btn btn-primary'>Add</button>
                 <button type='button' className='btn btn-secondary' onClick={() => navigate("/")}><FontAwesomeIcon icon={faArrowLeft} /> Back to Contact List</button>
+
+                </div>
             </form>
         </div>
     );

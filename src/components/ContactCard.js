@@ -5,6 +5,22 @@ import { faEye, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import user from '../Images/user.png';
 import { Link } from 'react-router-dom';
 
+const getRandomSoftColor = () => {
+    const r = Math.floor(Math.random() * 128 + 127); // Range: 127-255
+    const g = Math.floor(Math.random() * 128 + 127); // Range: 127-255
+    const b = Math.floor(Math.random() * 128 + 127); // Range: 127-255
+
+    // To ensure the color is very soft, we can also add a factor to reduce saturation
+    const factor = 0.5; // Adjust this factor to make colors softer or more vibrant
+    const softR = Math.floor(r * factor + 255 * (1 - factor));
+    const softG = Math.floor(g * factor + 255 * (1 - factor));
+    const softB = Math.floor(b * factor + 255 * (1 - factor));
+
+    return `rgb(${softR}, ${softG}, ${softB})`;
+};
+
+
+
 function ContactCard({ contact, onDelete }) {
     const { id, name } = contact;
 
@@ -16,7 +32,7 @@ function ContactCard({ contact, onDelete }) {
     };
 
     return (
-        <section className='contact-card'>
+        <section className='contact-card' style={{ backgroundColor: getRandomSoftColor() }} >
             <div className='contact-card__content'>
                 {/* Alt text updated for better accessibility */}
                 <img 

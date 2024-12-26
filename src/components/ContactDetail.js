@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import userdetail from '../Images/pexels-pixabay-415829 (1).jpg';
 import { faArrowLeft, faEdit, faPrint, faShareAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Button } from 'bootstrap';
 
 function ContactDetail({ contacts }) {
     const navigate = useNavigate();
@@ -105,20 +106,16 @@ function ContactDetail({ contacts }) {
                 <div><strong>Email:</strong> {email}</div>
             </div>
             <div className="button-group">
-                {/* Button to navigate back */}
-                <button onClick={handleBack} className='btn btn-warning' aria-label="Go back to the contact list">
-                    <FontAwesomeIcon icon={faArrowLeft} /> <strong>Back</strong>
+                <button onClick={handleBack} type="button" className="btn btn-warning" aria-label="Go back to the contact list">
+                    <FontAwesomeIcon icon={faArrowLeft} /> <strong>Back</strong>   
                 </button>
-                {/* Button to edit the contact */}
-                <button onClick={handleEdit} className='btn btn-primary' aria-label={`Edit contact for ${name}`}>
-                    <FontAwesomeIcon icon={faEdit} /> <strong>Edit</strong>
+                <button onClick={handleEdit} type="button" className="btn btn-primary" aria-label={`Edit contact for ${name}`}>
+                    <FontAwesomeIcon icon={faEdit} /> <strong> Edit</strong>  
                 </button>
-                {/* Button to share the contact */}
-                <button onClick={handleShare} className='btn btn-info' aria-label={`Share contact for ${name}`}>
+                <button onClick={handleShare} type="button" className="btn btn-info" aria-label={`Share contact for ${name}`}>
                     <FontAwesomeIcon icon={faShareAlt} /> <strong>Share</strong>
                 </button>
-                {/* Button to print the contact */}
-                <button onClick={handlePrint} className='btn btn-success' aria-label={`Print contact for ${name}`}>
+                <button onClick={handlePrint} type="button" className="btn btn-success" aria-label={`Print contact for ${name}`}>
                     <FontAwesomeIcon icon={faPrint} /> <strong>Print</strong>
                 </button>
             </div>

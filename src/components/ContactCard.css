@@ -1,125 +1,119 @@
-.item {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-    padding: 20px 25px; /* Spacious padding */
-    margin: 20px 0; /* Increased space between cards */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    color: #fff; /* Default text color to white for better contrast */
-    border: 2px solid black;
+/* Contact card container styles */
+.contact-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
 }
 
-/* Hover effect for the card */
-.item:hover {
-    transform: translateY(-8px); /* Card lift on hover */
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Content area styling */
-.content {
-    display: flex; /* Flexbox for layout */
-    align-items: center; /* Center vertically */
-    flex: 1; /* Take available space */
-    padding-right: 15px; /* Add some padding to the right */
+/* Flex layout for content inside the card */
+.contact-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
 }
 
-/* User image styling */
-.userimg {
-    width: 80px; /* Slightly larger image */
-    height: 80px; /* Slightly larger image */
-    border-radius: 50%; /* Circular image */
-    margin-right: 25px; /* Increased space between image and text */
-    border: 3px solid; /* Border color will be set dynamically */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+/* User image styles */
+.contact-card__userimg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+  transition: transform 0.3s ease;
 }
 
-/* User image hover effect */
-.userimg:hover {
-    transform: scale(1.1); /* Slightly enlarge the image on hover */
+.contact-card__userimg:hover {
+  transform : scale(1.1);
 }
 
-/* Header styling for the contact name */
-.header {
-    font-weight: 600; /* Semi-bold text for emphasis */
-    font-size: 1.75em; /* Larger font for better readability */
-    color: #333; /* Dark gray color for the name */
-    flex: 1; /* Allow the name to take available space */
-    margin-right: 20px; /* Add some space to the right */
-    transition: color 0.3s ease; /* Smooth transition for color change */
+/* Contact name styling */
+.contact-card__header {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-/* Action buttons container */
-.action-buttons {
-    display: flex; /* Flexbox for layout */
-    align-items: center; /* Center vertically */
-    margin-left: auto; /* Push buttons to the right */
+/* Action buttons styling */
+.contact-card__actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
 }
 
-/* Button styling */
-.btn {
-    padding: 12px 18px; /* Increased padding */
-    border: 2px solid transparent; /* Default border, transparent */
-    border-radius: 8px; /* Rounded corners */
-    font-size: 16px; /* Larger font size */
-    cursor: pointer; /* Pointer cursor */
-    display: flex; /* Center text and icon */
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
-    gap: 8px; /* Space between icon and text */
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+/* Button styles for actions */
+.contact-card__btn {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* View button styling */
-.btn-view{
-    margin-right: 15px; /* Space between buttons */
-
+.contact-card__btn--view {
+  background-color: #007bff;
+  color: #fff;
 }
 
-
-
-/* Icon styling */
-.icon {
-    color: #dc3545; /* Danger red color */
-    cursor: pointer; /* Pointer cursor */
-    transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition */
-    margin-left: 15px; /* More space between buttons */
-    font-size: 1.5em; /* Increase icon size */
-    border: none; /* Remove icon border */
-    background-color: transparent; /* Transparent background */
+.contact-card__btn--view:hover {
+  background-color: #0056b3;
 }
 
-/* Icon hover effect */
-.icon:hover {
-    color: #c82333; /* Darker red on hover */
-    transform: scale(1.1); /* Slightly enlarge icon */
+/* Delete button styling */
+.contact-card__btn--delete {
+  background-color: #dc3545;
+  color: #fff;
 }
 
-.viewlink {
-    text-decoration: none; /* Remove underline from link */
-    
+.contact-card__btn--delete:hover {
+  background-color: #c82333;
 }
 
-/* Responsive design for mobile screens */
-@media (max-width: 600px) {
-    .item {
-        padding: 15px 20px; /* Reduced padding on smaller screens */
-    }
+/* Link styling for the view button */
+.contact-card__view-link {
+  text-decoration: none;
+}
 
-    .header {
-        font-size: 1.5em; /* Slightly smaller font size */
-    }
+/* Icon styles for the buttons */
+.contact-card__btn .icon {
+  font-size: 1.3em;
+  margin-right: 8px;
+}
 
-    .userimg {
-        width: 65px; /* Smaller image */
-        height: 65px; /* Smaller image */
-    }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-card__content {
+    padding: 15px;
+  }
 
-    .btn {
-        font-size: 14px; /* Smaller font size */
-    }
+  .contact-card__userimg {
+    width: 80px;
+    height: 80px;
+  }
 
-    .btn-view {
-        font-size: 15px; /* Font size for view button */
-    }
+  .contact-card__header {
+    font-size: 1.4rem;
+  }
+
+  .contact-card__btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
 }
