@@ -2,18 +2,15 @@ import React, { useState, useEffect } from 'react';
 import './EditContact.css';
 import { useNavigate, useParams } from 'react-router-dom';
 
-function EditContact({ contacts, updateContact }) {
+function EditContact({ contacts, onUpdateContact }) {
     const navigate = useNavigate();
-    const { id } = useParams();
-    
-    const contact = contacts.find(contact => contact.id === id);
+    const { id } = useParams(); // This id comes as a string, so we will parse it
+    const contact = contacts.find(contact => contact.id === parseInt(id)); // Ensure the comparison is done correctly
 
-    // Initialize state with empty values
     const [name, setName] = useState('');
     const [mobile, setMobile] = useState('');
     const [email, setEmail] = useState('');
-
-    // Use useEffect to set the state when the contact is found
+    
     useEffect(() => {
         if (contact) {
             setName(contact.name);
@@ -22,17 +19,22 @@ function EditContact({ contacts, updateContact }) {
         }
     }, [contact]);
 
-    const handleSave = () => {
-        const updatedContact = { id, name, mobile, email };
-        updateContact(updatedContact);
-        navigate(`/contact/${id}`);
+    const handleSave = (e) => {
+        e.preventDefault();
+
+        if (!name || !mobile || !email) {
+            return; // Add more validation if necessary
+        }
+
+        const updatedContact = { id: parseInt(id), name, mobile, email }; // Ensure id is a number
+        onUpdateContact(updatedContact); // Call the onUpdateContact function passed from the parent
+        navigate(`/contact/${id}`); // Navigate to the detail page after update
     };
 
     const handleCancel = () => {
-        navigate(`/contact/${id}`);
+        navigate(`/contact/${id}`); // Navigate back to the contact detail page
     };
 
-    // If no contact is found, show a message
     if (!contact) {
         return <div>No contact details available.</div>;
     }
@@ -40,7 +42,7 @@ function EditContact({ contacts, updateContact }) {
     return (
         <div className="edit-contact">
             <h2>Edit Contact</h2>
-            <form onSubmit={(e) => { e.preventDefault(); handleSave(); }}>
+            <form onSubmit={handleSave}>
                 <div className="form-group">
                     <label htmlFor="name">Name:</label>
                     <input
@@ -49,7 +51,7 @@ function EditContact({ contacts, updateContact }) {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         required
-                        pattern="[A-Za-z\s]+" // Allows letters and spaces
+                        pattern="[A-Za-z\s]+"  // Pattern for name validation (only letters and spaces)
                         title="Name should only contain letters and spaces."
                     />
                 </div>
@@ -61,7 +63,7 @@ function EditContact({ contacts, updateContact }) {
                         value={mobile}
                         onChange={(e) => setMobile(e.target.value)}
                         required
-                        pattern="\d{10}" // Allows exactly 10 digits
+                        pattern="\d{10}"  // Validates a 10-digit mobile number
                         title="Mobile number must be exactly 10 digits."
                     />
                 </div>
@@ -73,7 +75,7 @@ function EditContact({ contacts, updateContact }) {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" // Basic email pattern
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" // Email validation pattern
                         title="Please enter a valid email address."
                     />
                 </div>

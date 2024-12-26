@@ -5,33 +5,48 @@ import { faEye, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import user from '../Images/user.png';
 import { Link } from 'react-router-dom';
 
-function ContactCard(props) {
-    const { id, name , backgroundColor } = props.contact; // Only destructure the name
+function ContactCard({ contact, onDelete }) {
+    const { id, name } = contact;
 
-    
-
+    // Ensure the onDelete prop is a function before calling it
+    const handleDelete = () => {
+        if (typeof onDelete === 'function') {
+            onDelete(id);
+        }
+    };
 
     return (
-        <article className='item'   style={{ backgroundColor }} > {/* Use <article> for better semantics */}
-            <div className='content'>
-                <img className='userimg' alt='User  profile' src={user} />
-                <div className='header'>{name}</div>
-                <div className="action-buttons">
-                    <Link   className='viewlink'  to={`/contact/${id}`} aria-label={`View details for ${name}`}>
-                        <button className='btn btn-view' style={{border:"2px solid",color:'black'}} >
+        <section className='contact-card'>
+            <div className='contact-card__content'>
+                {/* Alt text updated for better accessibility */}
+                <img 
+                    className='contact-card__userimg' 
+                    alt={`Profile picture of ${name}`} 
+                    src={user} 
+                />
+                <div className='contact-card__header'>{name}</div>
+                <div className="contact-card__actions">
+                    {/* View button with aria-label for better accessibility */}
+                    <Link 
+                        className='contact-card__view-link' 
+                        to={`/contact/${id}`} 
+                        aria-label={`View details for ${name}`}
+                    >
+                        <button className='contact-card__btn contact-card__btn--view'>
                             <FontAwesomeIcon icon={faEye} aria-hidden="true" /> View
                         </button>
                     </Link>
+                    {/* Delete button with aria-label for better accessibility */}
                     <button 
-                        className='icon' 
-                        onClick={() => { props.clickHandler(id); }} 
-                        aria-label={`Delete ${name}`}
+                        className='contact-card__btn contact-card__btn--delete' 
+                        onClick={handleDelete} 
+                        aria-label={`Delete contact for ${name}`}
                     >
                         <FontAwesomeIcon icon={faTrashCan} aria-hidden="true" />
                     </button>
                 </div>
             </div>
-        </article>
+        </section>
     );
 }
 

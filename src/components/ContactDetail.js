@@ -8,11 +8,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function ContactDetail({ contacts }) {
     const navigate = useNavigate();
     const { id } = useParams();
-    
     const contact = contacts.find(contact => contact.id === id);
 
     if (!contact) {
-        return <div>No contact details available.</div>;
+        return (
+            <div className="no-contact">
+                <h2>No contact details available.</h2>
+                <button onClick={() => navigate("/")} className="btn btn-warning">
+                    <FontAwesomeIcon icon={faArrowLeft} /> <strong>Back to Contact List</strong>
+                </button>
+            </div>
+        );
     }
 
     const { name, mobile, email } = contact;
@@ -56,9 +62,8 @@ function ContactDetail({ contacts }) {
                         th, td { padding: 10px; text-align: left; border: 1px solid #ddd; }
                         th { background-color: #f2f2f2; }
                         .imgdetail { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid #007bff; }
-                    
                         @media print {
-                            button { display: none; } /* Hide buttons when printing */
+                            button { display: none; }
                         }
                     </style>
                 </head>
@@ -67,7 +72,7 @@ function ContactDetail({ contacts }) {
                     <table>
                         <tr>
                             <th>Photo</th>
-                            <td><img class="imgdetail" src="${userdetail}" alt="user" /></td>
+                            <td><img class="imgdetail" src="${userdetail}" alt="Profile image of ${name}" /></td>
                         </tr>
                         <tr>
                             <th>Name</th>
@@ -92,23 +97,28 @@ function ContactDetail({ contacts }) {
     return (
         <div className="contact-detail">
             <h2>Contact Detail</h2>
-            <img className='imgdetail' src={userdetail} alt='user' />
+            {/* Image with more descriptive alt text */}
+            <img className='imgdetail' src={userdetail} alt={`Profile image of ${name}`} />
             <div className="info">
                 <div><strong>Name:</strong> {name}</div>
                 <div><strong>Mobile:</strong> {mobile}</div>
                 <div><strong>Email:</strong> {email}</div>
             </div>
             <div className="button-group">
-                <button onClick={handleBack} className='btn btn-warning'>
+                {/* Button to navigate back */}
+                <button onClick={handleBack} className='btn btn-warning' aria-label="Go back to the contact list">
                     <FontAwesomeIcon icon={faArrowLeft} /> <strong>Back</strong>
                 </button>
-                <button onClick={handleEdit} className='btn btn-primary'>
+                {/* Button to edit the contact */}
+                <button onClick={handleEdit} className='btn btn-primary' aria-label={`Edit contact for ${name}`}>
                     <FontAwesomeIcon icon={faEdit} /> <strong>Edit</strong>
                 </button>
-                <button onClick={handleShare} className='btn btn-info'>
+                {/* Button to share the contact */}
+                <button onClick={handleShare} className='btn btn-info' aria-label={`Share contact for ${name}`}>
                     <FontAwesomeIcon icon={faShareAlt} /> <strong>Share</strong>
                 </button>
-                <button onClick={handlePrint} className='btn btn-success'>
+                {/* Button to print the contact */}
+                <button onClick={handlePrint} className='btn btn-success' aria-label={`Print contact for ${name}`}>
                     <FontAwesomeIcon icon={faPrint} /> <strong>Print</strong>
                 </button>
             </div>

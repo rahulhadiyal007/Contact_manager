@@ -4,36 +4,62 @@ import { useNavigate } from 'react-router-dom';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function AddContact({ abc }) {
-    const [state, setState] = useState({
-        name: "",
-        mobile: "",
-        email: ""
-    });
-
+function AddContact({ onAddContact }) {
+    const [name, setName] = useState("");
+    const [mobile, setMobile] = useState("");
+    const [email, setEmail] = useState("");
+    const [error, setError] = useState(""); // To store form validation errors
     const navigate = useNavigate();
 
-    const add = (e) => {
+    const validateForm = () => {
+        if (!name || !mobile || !email) {
+            return "All fields are mandatory";
+        }
+        // Mobile number should be exactly 10 digits
+        const mobileRegex = /^\d{10}$/;
+        if (!mobileRegex.test(mobile)) {
+            return "Mobile number must be exactly 10 digits";
+        }
+        // Email validation (simple)
+        const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+        if (!emailRegex.test(email)) {
+            return "Please enter a valid email address";
+        }
+        return ""; // No error
+    };
+
+    const addContact = (e) => {
         e.preventDefault();
-        if (state.name === "" || state.mobile === "" || state.email === "") {
-            alert("All fields are mandatory");
+        
+        // Validate form before adding
+        const validationError = validateForm();
+        if (validationError) {
+            setError(validationError);
             return;
         }
+        
+        // Clear previous error message
+        setError("");
 
-        abc(state);
-        setState({
-            name: "",
-            mobile: "",
-            email: ""
-        });
-
-    
+        // Create new contact object
+        const newContact = { name, mobile, email };
+        
+        // Call the onAddContact function passed as prop
+        onAddContact(newContact);
+        
+        // Reset the form fields
+        setName("");
+        setMobile("");
+        setEmail("");
+        
+        // Navigate back to the contact list
+        navigate("/");
     };
 
     return (
         <div className='main-add-contact'>
             <h2>Add Contact</h2>
-            <form onSubmit={add}>
+            <form onSubmit={addContact}>
                 <div className="form-group">
                     <label htmlFor="usr">Name:</label>
                     <input
@@ -41,10 +67,9 @@ function AddContact({ abc }) {
                         className="form-control"
                         id="usr"
                         placeholder='Enter Name'
-                        pattern="[A-Za-z\s]+" // Only allows letters and spaces
                         required
-                        value={state.name}
-                        onChange={(e) => setState({ ...state, name: e.target.value })}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                     />
                 </div>
                 <div className="form-group">
@@ -54,10 +79,9 @@ function AddContact({ abc }) {
                         className="form-control"
                         id="mbl"
                         placeholder='Enter Mobile Number'
-                        pattern="\d{10}" 
                         required
-                        value={state.mobile}
-                        onChange={(e) => setState({ ...state, mobile: e.target.value })}
+                        value={mobile}
+                        onChange={(e) => setMobile(e.target.value)}
                     />
                 </div>
                 <div className="form-group">
@@ -67,13 +91,14 @@ function AddContact({ abc }) {
                         className="form-control"
                         id="email"
                         placeholder='Enter Email'
-                        value={state.email}
                         required
-                        onChange={(e) => setState({ ...state, email: e.target.value })}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
+                {error && <div className="error-message">{error}</div>}
                 <button type='submit' className='btn btn-primary'>Add</button>
-                <button type='button' className='btn btn-secondary' onClick={() => navigate("/")}><FontAwesomeIcon icon={faArrowLeft} />  Back to Contact List</button>
+                <button type='button' className='btn btn-secondary' onClick={() => navigate("/")}><FontAwesomeIcon icon={faArrowLeft} /> Back to Contact List</button>
             </form>
         </div>
     );
