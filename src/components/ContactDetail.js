@@ -11,6 +11,7 @@ function ContactDetail({ contacts }) {
     const { id } = useParams();
     const contact = contacts.find(contact => contact.id === id);
 
+
     if (!contact) {
         return (
             <div className="no-contact">
@@ -29,6 +30,7 @@ function ContactDetail({ contacts }) {
     };
 
     const handleEdit = () => {
+        console.log("Navigating to edit for contact ID:", id);
         navigate(`/edit/${id}`);
     };
 
