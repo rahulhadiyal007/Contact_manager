@@ -1,71 +1,200 @@
+/* Container for the entire Contact List section */
 .maincontlist {
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+    background-color: #ffffff;
+    border-radius: 12px;
     margin: 20px;
-
-}
-
-/* Search container styling */
-.search-container {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .maincontlist:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Subtle hover effect for the container */
+  }
+  
+  /* Header of the contact list */
+  .contact-list-header {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Search container styling */
+  .search-container {
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center items vertically */
     justify-content: space-between; /* Space between input and button */
-    margin: 20px 0; /* Space above and below the search container */
-    padding: 10px; /* Padding inside the container */
-    background-color: #f8f9fa; /* Light gray background for the container */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-/* Search bar styling */
-.search-bar {
+    margin-bottom: 30px;
+    padding: 12px 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .search-container:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Hover effect for search container */
+  }
+  
+  /* Search bar styling */
+  .search-bar {
     flex: 1; /* Allow the input to take available space */
-    padding: 10px; /* Padding inside the input */
-    border: 1px solid #ced4da; /* Light gray border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Font size for input */
-    transition: border-color 0.3s; /* Smooth transition for border color */
-    margin-right: 10px; /* Space between input and button */
-}
-
-/* Search bar focus state */
-.search-bar:focus {
-    border-color: #007bff; /* Change border color on focus */
-    outline: none; /* Remove default outline */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Light blue glow */
-}
-
-/* Button styling */
-.btn {
-    padding: 10px 15px; /* Padding inside buttons */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Font size for buttons */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
-}
-
-/* Success button styling */
-.btn-success {
-    background-color: #28a745; /* Bootstrap success color */
-    color: white; /* White text */
-    
-}
-
-.link-button {
-    text-decoration: none; /* Remove underline */
-}
-
-/* Success button hover state */
-.btn-success:hover {
-    background-color: #218838; /* Darker green on hover */
+    padding: 12px 16px;
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+  }
+  
+  .search-bar:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4); /* Light blue glow on focus */
+    background-color: #f1f8ff; /* Slight background color change */
+  }
+  
+  /* Button styling */
+  .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+  }
+  
+  /* Success button styling */
+  .btn-success {
+    background-color: #28a745;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
     transform: scale(1.05); /* Slight enlargement on hover */
-}
-
-
-
-
-
-
-
+  }
+  
+  /* Container for the list of contacts */
+  .contact-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* When no contacts are found */
+  .contact-list p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* Contact card styling */
+  .contact-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle hover effect for contact card */
+  }
+  
+  /* Contact card content */
+  .contact-card__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* User image styling */
+  .contact-card__userimg {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  /* Contact card header */
+  .contact-card__header {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Contact card actions (buttons) */
+  .contact-card__actions {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  /* Action button styling */
+  .contact-card__btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* View button styling */
+  .contact-card__btn--view {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .contact-card__btn--view:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Delete button styling */
+  .contact-card__btn--delete {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .contact-card__btn--delete:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+  }
+  
+  /* Add contact button styling inside the link */
+  .link-button {
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    /* Responsive adjustments for smaller screens */
+    .search-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .search-bar {
+      margin-bottom: 15px;
+    }
+  
+    .contact-list {
+      grid-template-columns: 1fr; /* One column layout for small screens */
+    }
+  
+    .contact-card__content {
+      padding: 15px;
+    }
+  }
+  

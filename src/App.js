@@ -7,7 +7,7 @@ import ContactList from './components/ContactList';
 import AddContact from './components/AddContact';
 import ContactDetail from './components/ContactDetail';
 import EditContact from './components/EditContact';
-// import NotFound from './components/NotFound';
+ import NotFound from './components/NotFound';
 
 const API_URL = 'https://contact-manager-json-server.onrender.com/contacts';
 
@@ -78,7 +78,7 @@ function App() {
           <Route path="/" element={<ContactList contacts={contacts} onDeleteContact={removeContactHandler} />} />
           <Route path="/contact/:id" element={<ContactDetail contacts={contacts} />} />
           <Route path="/edit/:id" element={<EditContact contacts={contacts} onUpdateContact={updateContactHandler} />} />
-          {/* <Route path="*" element={<NotFound />} /> */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </div>
