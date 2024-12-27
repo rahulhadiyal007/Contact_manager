@@ -31,7 +31,7 @@ function EditContact({ contacts, onUpdateContact }) {
             return; // Add more validation if necessary
         }
 
-        const updatedContact = { id: parseInt(id), name, mobile, email }; // Ensure id is a number
+        const updatedContact = { id: id, name, mobile, email }; // Ensure id is a number
         onUpdateContact(updatedContact); // Call the onUpdateContact function passed from the parent
         navigate(`/contact/${id}`); // Navigate to the detail page after update
     };
