@@ -40,19 +40,26 @@ function App() {
   };
 
   const updateContactHandler = async (updatedContact) => {
-    try { 
-      console.log("Updating contact with ID:", updatedContact.id);
-      await axios.put(`${API_URL}/${updatedContact.id}`, updatedContact);
+    try {
+      console.log("Attempting to update contact:", updatedContact);
+      const response = await axios.put(`${API_URL}/${updatedContact.id}`, updatedContact);
+      console.log("Contact updated successfully:", response.data);
+  
       setContacts((prevContacts) =>
         prevContacts.map((contact) =>
           contact.id === updatedContact.id ? updatedContact : contact
         )
       );
     } catch (err) {
-      console.error('Error updating contact:', err);
-      setError('Error updating contact. Please try again later.');
+      console.error("Error updating contact:", err.response || err);
+      if (err.response && err.response.status === 404) {
+        setError('Contact not found. Please try again later.');
+      } else {
+        setError('Error updating contact. Please try again later.');
+      }
     }
   };
+  
 
   const removeContactHandler = async (id) => {
     try {
