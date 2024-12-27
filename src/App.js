@@ -40,7 +40,8 @@ function App() {
   };
 
   const updateContactHandler = async (updatedContact) => {
-    try {
+    try { 
+      console.log("Updating contact with ID:", updatedContact.id);
       await axios.put(`${API_URL}/${updatedContact.id}`, updatedContact);
       setContacts((prevContacts) =>
         prevContacts.map((contact) =>
